@@ -189,117 +189,161 @@
         </div>
     </div>
     <div class="container py-5">
-        <!-- Timeline -->
-        <div class="col-md-6 timeline">
-            <!-- Posts -->
-            <div class="post-card p-3">
-                <div class="post-header d-flex justify-content-between align-items-center">
-                    <div class="d-flex align-items-center">
-                        <img src="assets/pfp.png" alt="User Avatar" class="rounded-circle me-2 avatar"  
-                             width="50" height="50">
-                        <div>
-                            <span class="fw-bold">Alice Smith</span><br>
-                            <small class="text-muted">@alicesmith</small>
-                        </div>
-                    </div>
-                    <small class="text-muted">2 hours ago</small>
-                </div>
-                <div class="post-body mt-3">
-                    <p>Finally found the right answer for this question!</p>
-                    <img src="assets/question.jpg" alt="Post Image" class="img-fluid rounded">
-                </div>
-                <div class="post-footer mt-3">
-                    <button class="btn btn-sm btn-outline-secondary toggle-comments">Comment</button>
-                    <div class="comments mt-3 d-none">
-                        <div class="comments-list">
-                            <!-- Existing comments -->
-                            <div class="comment p-2 border rounded mb-2">
-                                <strong>Michael Brown:</strong> Great post, Alice!
-                            </div>
-                            <div class="comment p-2 border rounded mb-2">
-                                <strong>Jane Doe:</strong> Thanks for sharing.
+        <div class="row">
+            <!-- Timeline -->
+            <div class="col-md-8 timeline">
+                <!-- Posts -->
+                <div class="post-card p-3">
+                    <div class="post-header d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                            <img src="assets/pfp.png" alt="User Avatar" class="rounded-circle me-2 avatar"  
+                                width="50" height="50">
+                            <div>
+                                <span class="fw-bold">Alice Smith</span><br>
+                                <small class="text-muted">@alicesmith</small>
                             </div>
                         </div>
-                        <!-- Add a new comment -->
-                        <form class="add-comment mt-2">
-                            <textarea class="form-control mb-2" rows="2" placeholder="Write a comment"></textarea>
-                            <button class="btn btn-sm" style="background-color: #6a1b9a; color: white;">Post Comment</button>
-                        </form>
+                        <small class="text-muted">2 hours ago</small>
+                    </div>
+                    <div class="post-body mt-3">
+                        <p>Finally found the right answer for this question!</p>
+                        <img src="assets/question.jpg" alt="Post Image" class="img-fluid rounded">
+                    </div>
+                    <div class="post-footer mt-3">
+                        <button class="btn btn-sm btn-outline-secondary toggle-comments">Comment</button>
+                        <div class="comments mt-3 d-none">
+                            <div class="comments-list">
+                                <!-- Existing comments -->
+                                <div class="comment p-2 border rounded mb-2">
+                                    <strong>Michael Brown:</strong> Great post, Alice!
+                                </div>
+                                <div class="comment p-2 border rounded mb-2">
+                                    <strong>Jane Doe:</strong> Thanks for sharing.
+                                </div>
+                            </div>
+                            <!-- Add a new comment -->
+                            <form class="add-comment mt-2">
+                                <textarea class="form-control mb-2" rows="2" placeholder="Write a comment"></textarea>
+                                <button class="btn btn-sm" style="background-color: #6a1b9a; color: white;">Post Comment</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="post-card p-3">
-                <div class="post-header d-flex justify-content-between align-items-center">
-                    <div class="d-flex align-items-center">
-                        <img src="assets/pfp.png" alt="User Avatar" class="rounded-circle me-2 avatar" 
-                             width="50" height="50">
-                        <div>
-                            <span class="fw-bold">May Seavey</span><br>
-                            <small class="text-muted">@mayseavey</small>
-                        </div>
-                    </div>
-                    <small class="text-muted">5 hours ago</small>
-                </div>
-                <div class="post-body mt-3">
-                    <p>Anyone can help me with my coding assignment?</p>
-                </div>
-                <div class="post-footer mt-3">
-                    <button class="btn btn-sm btn-outline-secondary toggle-comments">Comment</button>
-                    <div class="comments mt-3 d-none">
-                        <div class="comments-list">
-                            <!-- Existing comments -->
-                            <div class="comment p-2 border rounded mb-2">
-                                <strong>Dany:</strong> You can try ask Tutor John Doe. 
+                <div class="post-card p-3">
+                    <div class="post-header d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                            <img src="assets/pfp.png" alt="User Avatar" class="rounded-circle me-2 avatar" 
+                                width="50" height="50">
+                            <div>
+                                <span class="fw-bold">May Seavey</span><br>
+                                <small class="text-muted">@mayseavey</small>
                             </div>
                         </div>
-                        <!-- Add a new comment -->
-                        <form class="add-comment mt-2">
-                            <textarea class="form-control mb-2" rows="2" placeholder="Write a comment"></textarea>
-                            <button class="btn btn-sm" style="background-color: #6a1b9a; color: white;">Post Comment</button>
-                        </form>
+                        <small class="text-muted">5 hours ago</small>
+                    </div>
+                    <div class="post-body mt-3">
+                        <p>Anyone can help me with my coding assignment?</p>
+                    </div>
+                    <div class="post-footer mt-3">
+                        <button class="btn btn-sm btn-outline-secondary toggle-comments">Comment</button>
+                        <div class="comments mt-3 d-none">
+                            <div class="comments-list">
+                                <!-- Existing comments -->
+                                <div class="comment p-2 border rounded mb-2">
+                                    <strong>Dany:</strong> You can try ask Tutor John Doe. 
+                                </div>
+                            </div>
+                            <!-- Add a new comment -->
+                            <form class="add-comment mt-2">
+                                <textarea class="form-control mb-2" rows="2" placeholder="Write a comment"></textarea>
+                                <button class="btn btn-sm" style="background-color: #6a1b9a; color: white;">Post Comment</button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="post-card p-3">
+                    <div class="post-header d-flex justify-content-between align-items-center">
+                        <div class="d-flex align-items-center">
+                            <img src="assets/pfp.png" alt="User Avatar" class="rounded-circle me-2 avatar"  
+                                width="50" height="50">
+                            <div>
+                                <span class="fw-bold">Jonah Marias</span><br>
+                                <small class="text-muted">@jonahmarias</small>
+                            </div>
+                        </div>
+                        <small class="text-muted">10 hours ago</small>
+                    </div>
+                    <div class="post-body mt-3">
+                        <p>Please help me with this question. </p>
+                        <img src="assets/question2.jpg" alt="Post Image" class="img-fluid rounded">
+                    </div>
+                    <div class="post-footer mt-3">
+                        <button class="btn btn-sm btn-outline-secondary toggle-comments">Comment</button>
+                        <div class="comments mt-3 d-none">
+                            <div class="comments-list">
+                                <!-- Existing comments -->
+                                <div class="comment p-2 border rounded mb-2">
+                                    <strong>Amy Avery:</strong> I wish I can help..
+                                </div>
+                            </div>
+                            <!-- Add a new comment -->
+                            <form class="add-comment mt-2">
+                                <textarea class="form-control mb-2" rows="2" placeholder="Write a comment"></textarea>
+                                <button class="btn btn-sm" style="background-color: #6a1b9a; color: white;">Post Comment</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
             </div>
-            
-            <div class="post-card p-3">
-                <div class="post-header d-flex justify-content-between align-items-center">
-                    <div class="d-flex align-items-center">
-                        <img src="assets/pfp.png" alt="User Avatar" class="rounded-circle me-2 avatar"  
-                             width="50" height="50">
-                        <div>
-                            <span class="fw-bold">Jonah Marias</span><br>
-                            <small class="text-muted">@jonahmarias</small>
-                        </div>
-                    </div>
-                    <small class="text-muted">10 hours ago</small>
-                </div>
-                <div class="post-body mt-3">
-                    <p>Please help me with this question. </p>
-                    <img src="assets/question2.jpg" alt="Post Image" class="img-fluid rounded">
-                </div>
-                <div class="post-footer mt-3">
-                    <button class="btn btn-sm btn-outline-secondary toggle-comments">Comment</button>
-                    <div class="comments mt-3 d-none">
-                        <div class="comments-list">
-                            <!-- Existing comments -->
-                            <div class="comment p-2 border rounded mb-2">
-                                <strong>Amy Avery:</strong> I wish I can help..
+            <!-- Explore Other User Accounts (Right Sidebar) -->
+            <div class="col-lg-4">
+                <div class="explore-box p-3 bg-white rounded shadow-sm">
+                    <h5 class="text-center">Explore Users</h5>
+                    <ul class="list-group">
+                        <li class="list-group-item d-flex align-items-center">
+                            <img src="assets/pfp.png" alt="User Avatar" class="rounded-circle me-2 avatar" width="40" height="40">
+                            <div>
+                                <strong>Ahmad Ahsan</strong>
+                                <br>
+                                <small class="text-muted">@ahmadahsan</small>
                             </div>
-                        </div>
-                        <!-- Add a new comment -->
-                        <form class="add-comment mt-2">
-                            <textarea class="form-control mb-2" rows="2" placeholder="Write a comment"></textarea>
-                            <button class="btn btn-sm" style="background-color: #6a1b9a; color: white;">Post Comment</button>
-                        </form>
-                    </div>
+                            <div class="ms-auto d-flex">
+                                <a href="chattut.html" class="btn btn-sm btn-primary" style="background-color: #6a1b9a; border: none;">Chat</a>
+                                <button class="btn btn-sm btn-primary ms-2 follow-btn" style="background-color: #6a1b9a; border: none;">Follow</button>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <img src="assets/pfp.png" alt="User Avatar" class="rounded-circle me-2 avatar" width="40" height="40">
+                            <div>
+                                <strong>Michael Brown</strong>
+                                <br>
+                                <small class="text-muted">@michaelbrown</small>
+                            </div>
+                            <div class="ms-auto d-flex">
+                                <a href="chattut.html" class="btn btn-sm btn-primary" style="background-color: #6a1b9a; border: none;">Chat</a>
+                                <button class="btn btn-sm btn-primary ms-2 follow-btn" style="background-color: #6a1b9a; border: none;">Follow</button>
+                            </div>
+                        </li>
+                        <li class="list-group-item d-flex align-items-center">
+                            <img src="assets/pfp.png" alt="User Avatar" class="rounded-circle me-2 avatar" width="40" height="40">
+                            <div>
+                                <strong>Jane Doe</strong>
+                                <br>
+                                <small class="text-muted">@janedoe</small>
+                            </div>
+                            <div class="ms-auto d-flex">
+                                <a href="chattut.html" class="btn btn-sm btn-primary" style="background-color: #6a1b9a; border: none;">Chat</a>
+                                <button class="btn btn-sm btn-primary ms-2 follow-btn" style="background-color: #6a1b9a; border: none;">Follow</button>
+                            </div>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </div>
     </div>
 </div>
-    </div>
-
     <footer>
         <p class="mb-0">© 2024 StudySphere. All Rights Reserved.</p>
         <p>
@@ -346,6 +390,24 @@
             });
         });
     </script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Add event listener to all Follow buttons
+            document.querySelectorAll('.follow-btn').forEach(button => {
+                button.addEventListener('click', () => {
+                    // Toggle text between Follow and Followed
+                    if (button.textContent === 'Follow') {
+                        button.textContent = 'Followed';
+                        button.style.backgroundColor = '#9E9E9E'; // Change color to gray for "Followed"
+                        button.setAttribute('disabled', 'true'); // Disable the button after following
+                    } else {
+                        button.textContent = 'Follow';
+                        button.style.backgroundColor = '#6a1b9a'; // Revert to original color
+                        button.removeAttribute('disabled'); // Enable button if needed
+                    }
+                });
+            });
+        });
+    </script>    
 </body>
 </html>
-
