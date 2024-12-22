@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StudySphere - Monitor System</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Custom styles */
+        body {
+            background: rgb(222,222,222);
+            background: linear-gradient(90deg, rgba(222,222,222,1) 0%, rgba(250,232,255,1) 100%);
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar-brand {
+            font-weight: bold;
+            color: #6A0DAD !important; /* StudySphere purple */
+            font-size: 200%;
+            margin-left: 20px;
+            
+        }
+
+        .navbar-nav .nav-link {
+            position: relative;
+            padding: 10px 15px;
+            transition: color 0.3s, border-color 0.3s;
+        }
+
+        /* Hover Effect */
+        .navbar-nav .nav-link:hover {
+            color: #6a1b9a; /* Change to your preferred hover color */
+            border-bottom: 3px solid #6a1b9a; /* Add a bottom border on hover */
+        }
+
+        /* Active State */
+        .navbar-nav .nav-link.active {
+            color: #6a1b9a; /* Highlight color for the active page */
+            border-bottom: 3px solid #6a1b9a; /* Persistent border for active page */
+        }
+        
+
+        .container {
+            max-width: 1200px; /* Set a maximum width for the container */
+            margin: 0 auto;    /* Center the container horizontally */
+            padding: 5px;     /* Add padding around the container */
+        }
+
+        .card-container {
+            display: flex;            /* Use flexbox for alignment */
+            justify-content: space-between; /* Add space between the cards */
+            flex-wrap: wrap;          /* Allow wrapping to the next line if needed */
+            gap: 20px;                /* Add space between cards */
+            max-width: 1200px;        /* Set a maximum width for the card container */
+            margin: 0 auto;           /* Center the container horizontally */
+            padding: 10px;            /* Add padding around the container */
+        }
+
+        .summary-card {
+            flex: 1 1 calc(33.33% - 20px); /* Ensure each card takes up 1/3 of the row minus the gap */
+            border: 1px solid #ddd; /* Light border */
+            border-radius: 8px;      /* Rounded corners */
+            background-color: #ffffff; /* White background */
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+            text-align: center;
+            padding: 20px;
+            max-width: 90%;              /* Set a maximum width for each card */
+            min-width: 50%;              /* Set a minimum width for responsiveness */
+            margin-bottom: 50px;
+            margin-left: 20px;
+        }
+
+        .summary-card .card-title {
+            font-weight: bold;
+            color: #333; /* Dark gray */
+        }
+
+        .summary-card .card-text {
+            font-size: 16px;
+            margin-top: 5px;
+        }
+
+        /* Table Styling */
+        .table {
+            background-color: #ffffff; /* White background for table */
+            border-collapse: collapse;
+            margin: 0 auto;    /* Center the table */
+            padding: 20px;     /* Add padding around the table */
+            max-width: 95%;   /* Ensure table doesn't exceed container width */
+        }
+    
+    
+        .table thead {
+            background-color: #343a40; /* Dark header background */
+            color: #ffffff; /* White text for header */
+            text-align: center;
+        }
+
+        .table tbody tr {
+            transition: background-color 0.3s ease; /* Smooth hover effect */
+            text-align: center;
+        }
+
+        .table tbody tr:hover {
+            background-color: #f1f1f1; /* Light gray hover effect */
+        }
+
+        .table-bordered td, .table-bordered th {
+            border: 1px solid #ddd; /* Light border for table */
+        }
+
+        /* Status Badges */
+        .badge {
+            font-size: 12px;
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .badge.bg-danger {
+            background-color: #dc3545; /* Red for unresolved */
+        }
+
+        .badge.bg-warning {
+            background-color: #ffc107; /* Yellow for pending */
+        }
+
+        .badge.bg-success {
+            background-color: #28a745; /* Green for resolved */
+        }
+
+        /* Buttons */
+        .btn-sm {
+            padding: 5px 10px;
+            font-size: 12px;
+        }
+
+        .btn-success {
+            background-color: #28a745; /* Green for fix */
+            border: none;
+        }
+
+        .btn-danger {
+            background-color: #dc3545; /* Red for delete */
+            border: none;
+        }
+
+        .btn-success:hover, .btn-danger:hover {
+            opacity: 0.9; /* Slight opacity change on hover */
+        }
+
+        footer {
+            color: #333333; /* Dark gray text */
+            text-align: center;
+            padding: 20px 0;
+            position: relative;
+            bottom: 0;
+            width: 100%;
+            box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+        <!-- Navigation Bar -->
+        <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm sticky-top">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="manageuser.html">StudySphere <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-book" viewBox="0 0 16 16">
+                    <path d="M1 2.828c.885-.37 2.154-.769 3.388-.893 1.33-.134 2.458.063 3.112.752v9.746c-.935-.53-2.12-.603-3.213-.493-1.18.12-2.37.461-3.287.811zm7.5-.141c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783"/>
+                  </svg></a>
+    
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item">
+                            <a class="nav-link" href="manageuser.html">Manage</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active" href="monitorsys.html">Monitor</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="userprofilead.html">Profile</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="loginad.html">Logout</a>
+    
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+
+
+        <div class="container mt-5"></div>
+        <h2 class="text-center mb-4">System Monitoring Dashboard</h2>
+        <!-- System Health Summary -->
+        <div class="card-container"></div>
+    <div class="row mb-4">
+        <div class="col-md-4">
+            <div class="card summary-card">
+                <div class="card-body">
+                    <h5 class="card-title">System Health</h5>
+                    <p class="card-text text-success">All systems operational</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card summary-card">
+                <div class="card-body">
+                    <h5 class="card-title">Active Logs</h5>
+                    <p class="card-text">5 Issues</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="card summary-card">
+                <div class="card-body">
+                    <h5 class="card-title">Last Update</h5>
+                    <p class="card-text">2 minutes ago</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Logs Table -->
+    <div class="table-responsive">
+        <table class="table table-bordered table-hover">
+            <thead class="table-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Timestamp</th>
+                    <th>Issue</th>
+                    <th>Status</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>2024-12-22 10:45:23</td>
+                    <td>Database connection timeout</td>
+                    <td><span class="badge bg-danger">Unresolved</span></td>
+                    <td>
+                        <button class="btn btn-sm btn-success" onclick="location.href='fixlogs.html'">Fix</button>
+                        <button class="btn btn-sm btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>2024-12-22 09:30:10</td>
+                    <td>API latency high</td>
+                    <td><span class="badge bg-warning">Pending</span></td>
+                    <td>
+                        <button class="btn btn-sm btn-success" onclick="location.href='fixlogs.html'">Fix</button>
+                        <button class="btn btn-sm btn-danger">Delete</button>
+                    </td>
+                </tr>
+                <!-- Add more rows as needed -->
+            </tbody>
+        </table>
+    </div>
+</div>
+    
+
+
+    <br><br>
+    <footer>
+        <p class="mb-0">© 2024 StudySphere. All Rights Reserved.</p>
+        <p>
+            <a href="#">Privacy Policy</a> | 
+            <a href="#">Terms of Service</a>
+        </p>
+    </footer>
+
+<!-- Bootstrap Bundle with Popper.js -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
