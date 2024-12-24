@@ -1,0 +1,68 @@
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background: rgb(255,195,221);
+    background: linear-gradient(90deg, rgba(255,195,221,1) 0%, rgba(175,212,255,1) 100%);
+    margin: 0;
+    padding: 0;
+}
+
+/* Left Section */
+.left-section {
+    color: rgb(87, 87, 87);
+    height: 100%;
+    padding: 40px;
+}
+
+.row.py-5 {
+    padding-top: 30rem; /* Adjust as needed */
+    padding-bottom: 30rem; /* Adjust as needed */
+
+/* Right Section */
+.card {
+    border-radius: 30px;
+}
+
+/* Form Inputs */
+.form-control {
+    border-radius: 50px;
+    height: 45px;
+}
+
+/* Role Buttons */
+.role-btn {
+    margin: 5px;
+    border-radius: 10px;
+    width: 30%;
+    height: 45px;
+    font-weight: bold;
+}
+
+/* Buttons */
+.btn-primary {
+    border-radius: 10px;
+    height: 45px;
+}
+
+/* Link Styles */
+a {
+    text-decoration: none;
+}
+a:hover {
+    text-decoration: underline;
+}
+
+}
+
+footer {
+
+    color: #333333; /* Dark gray text */
+    text-align: center;
+    padding: 20px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+    font-size: 0.9rem;
+}
+
