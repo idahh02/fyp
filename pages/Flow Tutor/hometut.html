@@ -9,8 +9,8 @@
     <style>
         /* Custom styles */
         body {
-            background: rgb(222,222,222);
-            background: linear-gradient(90deg, rgba(222,222,222,1) 0%, rgba(250,232,255,1) 100%);
+            background: #235291; /* Deep Blue background */
+            background: linear-gradient(90deg, #235291 0%, #bcbcbc 100%); /* Blue to Light Gray gradient */
             font-family: Arial, sans-serif;
         }
 
@@ -20,6 +20,15 @@
             max-width: 600px;
         }
 
+        .search-bar .btn {
+            background-color: #57cc02; /* Background color for the search button */
+            border: none; /* Remove the default button border */
+            color: white; /* Text color inside the button */
+        }
+
+        .search-bar .btn:hover {
+            background-color: #4fb502; /* Hover effect with a different color */
+        }
         .upload-box {
             margin: 50px auto;
             padding: 20px;
@@ -37,7 +46,7 @@
 
         .navbar-brand {
             font-weight: bold;
-            color: #6A0DAD !important; /* StudySphere purple */
+            color: #235291 !important; 
             font-size: 200%;
             margin-left: 20px;
             
@@ -51,17 +60,17 @@
 
         /* Hover Effect */
         .navbar-nav .nav-link:hover {
-            color: #6a1b9a; /* Change to your preferred hover color */
-            border-bottom: 3px solid #6a1b9a; /* Add a bottom border on hover */
+            color: #235291; /* Change to your preferred hover color */
+            border-bottom: 3px solid #235291; /* Add a bottom border on hover */
         }
 
         /* Active State */
         .navbar-nav .nav-link.active {
-            color: #6a1b9a; /* Highlight color for the active page */
-            border-bottom: 3px solid #6a1b9a; /* Persistent border for active page */
+            color: #235291; /* Highlight color for the active page */
+            border-bottom: 3px solid #235291; /* Persistent border for active page */
         }
         footer {
-            color: #333333; /* Dark gray text */
+            color: #fcfcfc; /* Dark gray text */
             text-align: center;
             padding: 20px 0;
             position: relative;
@@ -89,6 +98,7 @@
 
         .post-card .post-header {
             font-weight: bold;
+            color: #235291;
         }
 
         .timeline {
@@ -109,12 +119,24 @@
         }
 
         .comment {
-            background-color: #f9f9f9;
+            background-color: #4fb502;
             font-size: 0.9rem;
         }
-
+        .btn {
+            background-color: #57cc02;
+            color: #ffffff;
+        }
+        .btn:hover {
+            background-color: #4fb502;
+        }
         textarea {
             resize: none;
+        }
+        .explore-box h4 {
+            color: #235291; /* Change to your desired color */
+        }
+        .upload-box h4 {
+            color: #235291; /* Change to your desired color */
         }
     </style>
 </head>
@@ -173,7 +195,7 @@
 
         <!-- Upload Post Box -->
         <div class="upload-box">
-            <h5 class="text-center">Ask Question </h5>
+            <h4 class="text-center"><strong>Upload Post</strong></h4>
             <form>
                 <div class="mb-3">
                     <textarea class="form-control" rows="4" placeholder="Write something"></textarea>
@@ -183,7 +205,7 @@
                     <input class="form-control" type="file" id="fileUpload">
                 </div>
                 <div class="text-center">
-                    <button type="submit" class="btn btn-primary "style="background-color: rgb(153, 80, 163); border: none; width :40%;">Post</button>
+                    <button type="submit" class="btn btn-primary "style="background-color: #57cc02; border: none; width :40%;">Upload</button>
                 </div>
             </form>
         </div>
@@ -210,7 +232,7 @@
                         <img src="assets/question.jpg" alt="Post Image" class="img-fluid rounded">
                     </div>
                     <div class="post-footer mt-3">
-                        <button class="btn btn-sm btn-outline-secondary toggle-comments">Comment</button>
+                        <button class="btn btn-sm toggle-comments">Comment</button>
                         <div class="comments mt-3 d-none">
                             <div class="comments-list">
                                 <!-- Existing comments -->
@@ -224,7 +246,7 @@
                             <!-- Add a new comment -->
                             <form class="add-comment mt-2">
                                 <textarea class="form-control mb-2" rows="2" placeholder="Write a comment"></textarea>
-                                <button class="btn btn-sm" style="background-color: #6a1b9a; color: white;">Post Comment</button>
+                                <button class="btn btn-sm" style="background-color: #57cc02; color: white;">Post Comment</button>
                             </form>
                         </div>
                     </div>
@@ -246,7 +268,7 @@
                         <p>Anyone can help me with my coding assignment?</p>
                     </div>
                     <div class="post-footer mt-3">
-                        <button class="btn btn-sm btn-outline-secondary toggle-comments">Comment</button>
+                        <button class="btn btn-sm toggle-comments">Comment</button>
                         <div class="comments mt-3 d-none">
                             <div class="comments-list">
                                 <!-- Existing comments -->
@@ -257,7 +279,7 @@
                             <!-- Add a new comment -->
                             <form class="add-comment mt-2">
                                 <textarea class="form-control mb-2" rows="2" placeholder="Write a comment"></textarea>
-                                <button class="btn btn-sm" style="background-color: #6a1b9a; color: white;">Post Comment</button>
+                                <button class="btn btn-sm" style="background-color: #57cc02; color: white;">Post Comment</button>
                             </form>
                         </div>
                     </div>
@@ -280,7 +302,7 @@
                         <img src="assets/question2.jpg" alt="Post Image" class="img-fluid rounded">
                     </div>
                     <div class="post-footer mt-3">
-                        <button class="btn btn-sm btn-outline-secondary toggle-comments">Comment</button>
+                        <button class="btn btn-sm toggle-comments">Comment</button>
                         <div class="comments mt-3 d-none">
                             <div class="comments-list">
                                 <!-- Existing comments -->
@@ -291,7 +313,7 @@
                             <!-- Add a new comment -->
                             <form class="add-comment mt-2">
                                 <textarea class="form-control mb-2" rows="2" placeholder="Write a comment"></textarea>
-                                <button class="btn btn-sm" style="background-color: #6a1b9a; color: white;">Post Comment</button>
+                                <button class="btn btn-sm" style="background-color: #57cc02; color: white;">Post Comment</button>
                             </form>
                         </div>
                     </div>
@@ -300,7 +322,7 @@
             <!-- Explore Other User Accounts (Right Sidebar) -->
             <div class="col-lg-4">
                 <div class="explore-box p-3 bg-white rounded shadow-sm">
-                    <h5 class="text-center">Explore Users</h5>
+                    <h4 class="text-center"><strong>Explore Users</strong></h4>
                     <ul class="list-group">
                         <li class="list-group-item d-flex align-items-center">
                             <img src="assets/pfp.png" alt="User Avatar" class="rounded-circle me-2 avatar" width="40" height="40">
@@ -310,8 +332,8 @@
                                 <small class="text-muted">@ahmadahsan</small>
                             </div>
                             <div class="ms-auto d-flex">
-                                <a href="chattut.html" class="btn btn-sm btn-primary" style="background-color: #6a1b9a; border: none;">Chat</a>
-                                <button class="btn btn-sm btn-primary ms-2 follow-btn" style="background-color: #6a1b9a; border: none;">Follow</button>
+                                <a href="chattut.html" class="btn btn-sm btn-primary" style="background-color: #57cc02; border: none;">Chat</a>
+                                <button class="btn btn-sm btn-primary ms-2 follow-btn" style="background-color: #57cc02; border: none;">Follow</button>
                             </div>
                         </li>
                         <li class="list-group-item d-flex align-items-center">
@@ -322,8 +344,8 @@
                                 <small class="text-muted">@michaelbrown</small>
                             </div>
                             <div class="ms-auto d-flex">
-                                <a href="chattut.html" class="btn btn-sm btn-primary" style="background-color: #6a1b9a; border: none;">Chat</a>
-                                <button class="btn btn-sm btn-primary ms-2 follow-btn" style="background-color: #6a1b9a; border: none;">Follow</button>
+                                <a href="chattut.html" class="btn btn-sm btn-primary" style="background-color: #57cc02; border: none;">Chat</a>
+                                <button class="btn btn-sm btn-primary ms-2 follow-btn" style="background-color: #57cc02; border: none;">Follow</button>
                             </div>
                         </li>
                         <li class="list-group-item d-flex align-items-center">
@@ -334,8 +356,8 @@
                                 <small class="text-muted">@janedoe</small>
                             </div>
                             <div class="ms-auto d-flex">
-                                <a href="chattut.html" class="btn btn-sm btn-primary" style="background-color: #6a1b9a; border: none;">Chat</a>
-                                <button class="btn btn-sm btn-primary ms-2 follow-btn" style="background-color: #6a1b9a; border: none;">Follow</button>
+                                <a href="chattut.html" class="btn btn-sm btn-primary" style="background-color: #57cc02; border: none;">Chat</a>
+                                <button class="btn btn-sm btn-primary ms-2 follow-btn" style="background-color: #57cc02; border: none;">Follow</button>
                             </div>
                         </li>
                     </ul>
