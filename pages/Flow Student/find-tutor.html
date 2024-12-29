@@ -9,8 +9,8 @@
     <style>
         /* Custom styles */
         body {
-            background: rgb(222,222,222);
-            background: linear-gradient(90deg, rgba(222,222,222,1) 0%, rgba(250,232,255,1) 100%);
+            background: #235291; /* Deep Blue background */
+            background: linear-gradient(90deg, #235291 0%, #bcbcbc 100%); /* Blue to Light Gray gradient */
             font-family: Arial, sans-serif;
         }
 
@@ -20,9 +20,19 @@
             max-width: 600px;
         }
 
+        .search-bar .btn {
+            background-color: #57cc02; /* Background color for the search button */
+            border: none; /* Remove the default button border */
+            color: white; /* Text color inside the button */
+        }
+
+        .search-bar .btn:hover {
+            background-color: #4fb502; /* Hover effect with a different color */
+        }
+
         .navbar-brand {
             font-weight: bold;
-            color: #6A0DAD !important; /* StudySphere purple */
+            color: #235291 !important; 
             font-size: 200%;
             margin-left: 20px;
             
@@ -36,14 +46,14 @@
 
         /* Hover Effect */
         .navbar-nav .nav-link:hover {
-            color: #6a1b9a; /* Change to your preferred hover color */
-            border-bottom: 3px solid #6a1b9a; /* Add a bottom border on hover */
+            color: #235291; /* Change to your preferred hover color */
+            border-bottom: 3px solid #235291; /* Add a bottom border on hover */
         }
 
         /* Active State */
         .navbar-nav .nav-link.active {
-            color: #6a1b9a; /* Highlight color for the active page */
-            border-bottom: 3px solid #6a1b9a; /* Persistent border for active page */
+            color: #235291; /* Highlight color for the active page */
+            border-bottom: 3px solid #235291; /* Persistent border for active page */
         }
 
         /* Tutor Cards */
@@ -68,7 +78,7 @@
         .card-title {
             font-size: 1.25rem;
             font-weight: bold;
-            color: #6a1b9a; /* Use your theme color */
+            color: #235291; /* Use your theme color */
         }
 
         .card-text {
@@ -82,7 +92,7 @@
         }
 
         .view-btn {
-            background-color: #6a1b9a; /* Default purple */
+            background-color: #57cc02; /* Default purple */
         }
 
         .view-btn:hover{
@@ -91,7 +101,7 @@
         }
 
         .req-btn {
-            background-color: #6a1b9a; /* Default purple */
+            background-color: #57cc02; /* Default purple */
         }
 
         .req-btn:hover{
@@ -101,7 +111,7 @@
 
 
         footer {
-            color: #333333; /* Dark gray text */
+            color: #fcfcfc; /* Dark gray text */
             text-align: center;
             padding: 20px 0;
             position: relative;
@@ -175,8 +185,8 @@
                             <h5 class="card-title">John Doe</h5>
                             <p class="card-text">Specialization: Mathematics</p>
                             <div class="ms-auto d-flex">
-                                <button class="btn btn-sm btn-primary ms-2 view-btn" style="background-color: #6a1b9a; border: none;">View</a>
-                                <button class="btn btn-sm btn-primary ms-2 req-btn" style="background-color: #6a1b9a; border: none;">Request</button>
+                                <button class="btn btn-sm btn-primary ms-2 view-btn" style="background-color: #57cc02; border: none;">View</a>
+                                <button class="btn btn-sm btn-primary ms-2 req-btn" style="background-color: #57cc02; border: none;">Request</button>
                             </div>
                         </div>
                     </div>
@@ -189,8 +199,8 @@
                             <h5 class="card-title">Jane Smith</h5>
                             <p class="card-text">Specialization: Physics</p>
                             <div class="ms-auto d-flex">
-                                <button class="btn btn-sm btn-primary ms-2 view-btn" style="background-color: #6a1b9a; border: none;">View</a>
-                                <button class="btn btn-sm btn-primary ms-2 req-btn" style="background-color: #6a1b9a; border: none;">Request</button>
+                                <button class="btn btn-sm btn-primary ms-2 view-btn" style="background-color: #57cc02; border: none;">View</a>
+                                <button class="btn btn-sm btn-primary ms-2 req-btn" style="background-color: #57cc02; border: none;">Request</button>
                             </div>
                         </div>
                     </div>
@@ -203,8 +213,8 @@
                             <h5 class="card-title">Emily Johnson</h5>
                             <p class="card-text">Specialization: Chemistry</p>
                             <div class="ms-auto d-flex">
-                                <button class="btn btn-sm btn-primary ms-2 view-btn" style="background-color: #6a1b9a; border: none;">View</a>
-                                <button class="btn btn-sm btn-primary ms-2 req-btn" style="background-color: #6a1b9a; border: none;">Request</button>
+                                <button class="btn btn-sm btn-primary ms-2 view-btn" style="background-color: #57cc02; border: none;">View</a>
+                                <button class="btn btn-sm btn-primary ms-2 req-btn" style="background-color: #57cc02; border: none;">Request</button>
                             </div>
                         </div>
                     </div>
@@ -217,8 +227,8 @@
                             <h5 class="card-title">Michael Brown</h5>
                             <p class="card-text">Specialization: Biology</p>
                             <div class="ms-auto d-flex">
-                                <button class="btn btn-sm btn-primary ms-2 view-btn" style="background-color: #6a1b9a; border: none;">View</a>
-                                <button class="btn btn-sm btn-primary ms-2 req-btn" style="background-color: #6a1b9a; border: none;">Request</button>
+                                <button class="btn btn-sm btn-primary ms-2 view-btn" style="background-color: #57cc02; border: none;">View</a>
+                                <button class="btn btn-sm btn-primary ms-2 req-btn" style="background-color: #57cc02; border: none;">Request</button>
                             </div>
                         </div>
                     </div>
@@ -231,8 +241,8 @@
                             <h5 class="card-title">Sarah Wilson</h5>
                             <p class="card-text">Specialization: English</p>
                             <div class="ms-auto d-flex">
-                                <button class="btn btn-sm btn-primary ms-2 view-btn" style="background-color: #6a1b9a; border: none;">View</a>
-                                <button class="btn btn-sm btn-primary ms-2 req-btn" style="background-color: #6a1b9a; border: none;">Request</button>
+                                <button class="btn btn-sm btn-primary ms-2 view-btn" style="background-color: #57cc02; border: none;">View</a>
+                                <button class="btn btn-sm btn-primary ms-2 req-btn" style="background-color: #57cc02; border: none;">Request</button>
                             </div>
                         </div>
                     </div>
@@ -246,8 +256,8 @@
                             <h5 class="card-title">David Lee</h5>
                             <p class="card-text">Specialization: Computer Science</p>
                             <div class="ms-auto d-flex">
-                                <button class="btn btn-sm btn-primary ms-2 view-btn" style="background-color: #6a1b9a; border: none;">View</a>
-                                <button class="btn btn-sm btn-primary ms-2 req-btn" style="background-color: #6a1b9a; border: none;">Request</button>
+                                <button class="btn btn-sm btn-primary ms-2 view-btn" style="background-color: #57cc02; border: none;">View</a>
+                                <button class="btn btn-sm btn-primary ms-2 req-btn" style="background-color: #57cc02; border: none;">Request</button>
                             </div>
                         </div>
                     </div>
