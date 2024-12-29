@@ -16,8 +16,9 @@
         }
 
         body {
+            background: #235291; /* Deep Blue background */
+            background: linear-gradient(90deg, #235291 0%, #bcbcbc 100%); /* Blue to Light Gray gradient */
             font-family: Arial, sans-serif;
-            background: linear-gradient(90deg, rgba(222, 222, 222, 1) 0%, rgba(250, 232, 255, 1) 100%);
         }
 
         main {
@@ -26,7 +27,7 @@
 
         .navbar-brand {
             font-weight: bold;
-            color: #6A0DAD !important; /* StudySphere purple */
+            color: #235291 !important; 
             font-size: 200%;
             margin-left: 20px;
             
@@ -40,14 +41,14 @@
 
         /* Hover Effect */
         .navbar-nav .nav-link:hover {
-            color: #6a1b9a; /* Change to your preferred hover color */
-            border-bottom: 3px solid #6a1b9a; /* Add a bottom border on hover */
+            color: #235291; /* Change to your preferred hover color */
+            border-bottom: 3px solid #235291; /* Add a bottom border on hover */
         }
 
         /* Active State */
         .navbar-nav .nav-link.active {
-            color: #6a1b9a; /* Highlight color for the active page */
-            border-bottom: 3px solid #6a1b9a; /* Persistent border for active page */
+            color: #235291; /* Highlight color for the active page */
+            border-bottom: 3px solid #235291; /* Persistent border for active page */
         }
 
          /* Follow Request List */
@@ -83,22 +84,20 @@
         .follow-request .user-info span {
             font-weight: bold;
             display: block;
-            color: #333;
+            color: #235291;
         }
 
         .follow-request .actions button {
             font-size: 0.9rem;
-            font-weight: bold;
         }
 
         .follow-request .actions .btn-accept {
-            background-color: #6a1b9a;
-            font-weight: bold;
+            background-color: #57cc02;
             color: white;
         }
 
         .follow-request .actions .btn-accept:hover {
-            background-color: #ccc;
+            background-color: #4fb502;
         }
 
         .follow-request .actions .btn-reject {
@@ -107,13 +106,13 @@
         }
 
         .follow-request .actions .btn-reject:hover {
-            background-color: #ccc;
+            background-color: #bcbcbc;
         }
 
         footer {
             width: 100%;
             text-align: center;
-            color: #333333;
+            color: #fcfcfc;
             box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
             padding: 20px 0;
             font-size: 0.9rem;
